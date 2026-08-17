@@ -295,3 +295,18 @@ require_type_annotated_api_methods = True
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+# hooks.py — this file holds everything, both jobs living together
+scheduler_events = {
+    "hourly": [
+        "upande_hydrax.upande_hydrax.tasks.sync_dcu_status"
+    ],
+    "daily": [
+        "upande_hydrax.upande_hydrax.tasks.sync_all_meter_readings",
+        "upande_hydrax.upande_hydrax.tasks.sync_all_token_records"
+    ]
+}
+
+fixtures = [
+    {"doctype": "Workspace", "filters": [["module", "=", "Upande Hydrax"]]},
+    {"doctype": "Custom HTML Block", "filters": [["name", "in", ["Upande Sensors"]]]}
+]

@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:meter_id",
+ "creation": "2026-08-14 11:17:41.319306",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "meter_id",
+  "house_number",
+  "cumulative_reading",
+  "tariff_id",
+  "column_break_srfe",
+  "token_balance",
+  "dcu",
+  "site",
+  "datetime_zrga",
+  "calin_customer_id",
+  "meter_type",
+  "protocol_version",
+  "status",
+  "section_break_wawj",
+  "geolocation_uhoo",
+  "location_section",
+  "latitude",
+  "longitude"
+ ],
+ "fields": [
+  {
+   "fieldname": "meter_id",
+   "fieldtype": "Data",
+   "label": "Meter ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "house_number",
+   "fieldtype": "Link",
+   "label": "House",
+   "options": "House"
+  },
+  {
+   "fieldname": "column_break_srfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "token_balance",
+   "fieldtype": "Float",
+   "label": "Token Balance"
+  },
+  {
+   "fieldname": "dcu",
+   "fieldtype": "Link",
+   "label": "DCU",
+   "options": "DCU"
+  },
+  {
+   "fieldname": "site",
+   "fieldtype": "Link",
+   "label": "Site",
+   "options": "Site"
+  },
+  {
+   "fieldname": "cumulative_reading",
+   "fieldtype": "Float",
+   "label": "Cumulative Reading"
+  },
+  {
+   "fieldname": "tariff_id",
+   "fieldtype": "Data",
+   "label": "Tariff ID"
+  },
+  {
+   "fieldname": "section_break_wawj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "geolocation_uhoo",
+   "fieldtype": "Geolocation"
+  },
+  {
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "datetime_zrga",
+   "fieldtype": "Datetime",
+   "label": "Last Synced"
+  },
+  {
+   "fieldname": "calin_customer_id",
+   "fieldtype": "Data",
+   "label": "Calin Customer ID"
+  },
+  {
+   "fieldname": "meter_type",
+   "fieldtype": "Data",
+   "label": "Meter Type"
+  },
+  {
+   "fieldname": "protocol_version",
+   "fieldtype": "Data",
+   "label": "Protocol Version"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nFaulty"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-17 11:27:50.790543",
+ "modified_by": "Administrator",
+ "module": "Upande Hydrax",
+ "name": "Water Meter",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "meter_id"
+}

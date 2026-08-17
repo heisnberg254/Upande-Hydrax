@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:receipt_id",
+ "creation": "2026-08-14 12:18:49.552291",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "meter",
+  "receipt_id",
+  "amount_paid",
+  "token",
+  "total_unit",
+  "token_first",
+  "token_second",
+  "repayment_amount",
+  "debt_remaining",
+  "closing_balance",
+  "mpesa_receipt_number",
+  "is_preview",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Water Meter"
+  },
+  {
+   "fieldname": "receipt_id",
+   "fieldtype": "Data",
+   "label": "Receipt ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount Paid"
+  },
+  {
+   "fieldname": "token",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Token"
+  },
+  {
+   "fieldname": "token_first",
+   "fieldtype": "Data",
+   "label": "Token Part 1"
+  },
+  {
+   "fieldname": "token_second",
+   "fieldtype": "Data",
+   "label": "Token Part 2"
+  },
+  {
+   "fieldname": "repayment_amount",
+   "fieldtype": "Currency",
+   "label": "Repayment Amount"
+  },
+  {
+   "fieldname": "debt_remaining",
+   "fieldtype": "Currency",
+   "label": "Debt Remaining"
+  },
+  {
+   "fieldname": "closing_balance",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Closing Balance"
+  },
+  {
+   "fieldname": "mpesa_receipt_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MPesa Receipt Number"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_preview",
+   "fieldtype": "Check",
+   "label": "Is Preview"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Top Up\nRepayment\nAdjustment"
+  },
+  {
+   "fieldname": "total_unit",
+   "fieldtype": "Float",
+   "label": "Total Unit"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-14 19:33:09.607107",
+ "modified_by": "Administrator",
+ "module": "Upande Hydrax",
+ "name": "Token Record",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "receipt_id"
+}
