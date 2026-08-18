@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "DCU",
+  "enabled": 1,
+  "modified": "2026-08-18 10:10:44.417126",
+  "module": "Upande Hydrax",
+  "name": "DCU",
+  "script": "frappe.listview_settings['DCU'] = {\n    onload: function(listview) {\n        listview.page.add_inner_button('Refresh', function() {\n            frappe.show_alert({message: 'Fetching DCU status...', indicator: 'blue'});\n            frappe.call({\n                method: \"upande_hydrax.upande_hydrax.tasks.sync_dcu_status\",\n                callback: function(r) {\n                    frappe.show_alert({message: 'DCU status updated', indicator: 'green'});\n                    listview.refresh();\n                },\n                error: function(r) {\n                    frappe.show_alert({message: 'Sync failed — check Error Log', indicator: 'red'});\n                }\n            });\n        });\n    }\n};",
+  "view": "List"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Token Record",
+  "enabled": 1,
+  "modified": "2026-08-18 10:23:52.411841",
+  "module": "Upande Hydrax",
+  "name": "Token History",
+  "script": "frappe.listview_settings['Token Record'] = {\n    onload: function(listview) {\n        listview.page.add_inner_button('Get Record', function() {\n            frappe.show_alert({message: 'Fetching token records...', indicator: 'blue'});\n            frappe.call({\n                method: \"upande_hydrax.upande_hydrax.tasks.sync_all_token_records\",\n                callback: function(r) {\n                    frappe.show_alert({message: 'Token records updated', indicator: 'green'});\n                    listview.refresh();\n                },\n                error: function(r) {\n                    frappe.show_alert({message: 'Sync failed — check Error Log', indicator: 'red'});\n                }\n            });\n        });\n    }\n};",
+  "view": "List"
+ }
+]

@@ -2,6 +2,7 @@ import frappe
 import requests
 
 
+@frappe.whitelist()
 def sync_dcu_status():
     settings = frappe.get_single("URL Setup Settings")
     url = f"{settings.base_url}/api/concentratorOnlineStatus/read"
@@ -224,6 +225,7 @@ def sync_token_records(meter_id):
     frappe.db.commit()
 
 
+@frappe.whitelist()
 def sync_all_token_records():
     meters = frappe.db.get_all("Water Meter", pluck="meter_id")
     for meter_id in meters:

@@ -308,5 +308,6 @@ scheduler_events = {
 
 fixtures = [
     {"doctype": "Workspace", "filters": [["module", "=", "Upande Hydrax"]]},
-    {"doctype": "Custom HTML Block", "filters": [["name", "in", ["Upande Sensors"]]]}
+    {"doctype": "Custom HTML Block", "filters": [["name", "in", ["Upande Sensors"]]]},
+    {"doctype": "Client Script", "filters": [["dt", "in", ["DCU", "Token Record"]]]}
 ]
